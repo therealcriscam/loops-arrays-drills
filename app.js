@@ -79,3 +79,28 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 
 myNames.forEach(name => name[0] === 'R')
 
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  return function(location) {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+  }
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const fireWarning = hazardWarningCreator('Fire on the Road');
+const iceWarning = hazardWarningCreator('Ice on the Road');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Centinela Ave and Olympic Blvd');
+fireWarning('4th and Main');
+iceWarning('2nd and Seneca');
+iceWarning('3rd and Avery');
+iceWarning('Division and J Street');
+
+
+
+const turtleArray = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+turtleArray.filter()
