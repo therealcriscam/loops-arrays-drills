@@ -73,6 +73,9 @@ const filteredNames = filter(myNames, function(name) {
   // This is known as a "predicate function" - it's a function that 
   // only returns a boolean
   return name[0] === 'R';
-});
+ });
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+myNames.forEach(name => name[0] === 'R')
+
