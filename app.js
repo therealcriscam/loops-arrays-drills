@@ -11,10 +11,6 @@ function max(numbers) {
 return currentMax;
 }
 
-const numbersTest = [4, 5, 8, 19, 12];
-const testFunction = function max(numbersTest);
-testFunction;
-
 function mmin(numbers) {
   let i = 0;
   let currentMin = numbers[0];
@@ -34,3 +30,23 @@ function average(numbers) {
   return sum/numbers.length;
 }
 
+function repeat(fn, n) {
+  // repeat should loop n times 
+  for (let i = 1; i <= n; i++) {
+    fn();
+  }
+}
+
+function hello() {
+  console.log('Hello World');
+}
+
+function goodbye() {
+  console.log('Goodbye world');
+}
+
+const runRepeat = repeat(hello, 5);
+console.log(runRepeat);
+
+const runRepeat2 = repeat(goodbye, 5);
+console.log(runRepeat2);
