@@ -103,4 +103,6 @@ iceWarning('Division and J Street');
 
 const turtleArray = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
-turtleArray.filter()
+turtleArray.filter(element => element[0] >= 0 && element[1] >= 0)
+.map((element) => element[0]+element[1])
+.forEach(element => console.log(`${element}`))
